@@ -1,4 +1,4 @@
-<h1><%= @projects.size %> Projects</h1>
+<h1><%= plurarize(@projects.size, 'Project') %> </h1>
 
 
 <% @projects.each do |project| %>
