@@ -1,4 +1,4 @@
-<h1><%= plurarize(@projects.size, 'Project') %> </h1>
+<h1><%= pluralize(@projects.size, 'Project') %> </h1>
 
 
 <% @projects.each do |project| %>
@@ -7,7 +7,7 @@
       <h2><%= project.name %></h2>
     </header>
     <p>
-      <%= project.description %>
+      <%= truncate( project.description , length:150, separator: ' ') %>
     </p>
     <table>
       <tr>
@@ -16,7 +16,7 @@
       </tr>
       <tr>
         <th>Pledge End Date:</th>
-        <td><%= project.pledging_ends_on %></td>
+        <td><%= format_pledging_ends_on(project) %></td>
       </tr>
       <tr>
         <th>Website:</th>
