@@ -1,5 +1,5 @@
 module EventsHelper
-def format_total_gross(event)
+def format_price(event)
    if event.free?
      content_tag(:strong, 'Free!')
    else
