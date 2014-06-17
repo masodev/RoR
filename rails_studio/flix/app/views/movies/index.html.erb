@@ -3,7 +3,11 @@
 <% @movies.each do |movie| %>
   <article>
     <header>
+<<<<<<< HEAD
       <h2><%= link_to movie.title, movie %></h2>
+=======
+      <h2><%= movie.title %></h2>
+>>>>>>> parent of a794306... Routes: Linking Pages
     </header>
     <p>
       <%= truncate(movie.description, length: 40, separator: ' ') %>
