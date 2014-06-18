@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  def free?
-    price.blank? || price.zero?
-  end
+	def free?
+    price.zero? || price.blank?
+	end
 end
